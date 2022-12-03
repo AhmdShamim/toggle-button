@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.7s linear;
+}
+
+body.dark {
+  background-color: #292929
+}
+
+.switch-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.switch-slider {
+  width: 150px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50px;
+}
+
+.switch-button {
+  width: 45px;
+  height: 45px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  top: 2.5px;
+  transition: all 0.7s linear;
+  cursor: pointer;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .switch-bg {
+  box-shadow: 0px 0px 5px white;
+}
+
+.checkbox:checked + .switch-bg .switch-button {
+  transform: translateX(145px);
+}
